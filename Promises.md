@@ -44,4 +44,63 @@ In this example, the Promise constructor takes a function that uses setTimeout t
 
 The then method is used to handle the fulfillment of the promise and the catch method is used to handle the rejection of the promise.
 
+### Constructing a Promise Object
+To construct a promise in JavaScript, you can use the Promise constructor. The Promise constructor takes a function that defines the asynchronous operation that the promise represents. This function takes two arguments, resolve and reject, which are functions that are used to fulfill or reject the promise.
+
+Here's an example of how to construct a promise:
+
+javascript
+```
+const promise = new Promise((resolve, reject) => {
+  // Perform an asynchronous operation
+  const result = 42;
+  if (result) {
+    resolve(result); // Fulfill the promise with a value
+  } else {
+    reject("Error"); // Reject the promise with a reason
+  }
+});
+```
+In this example, the Promise constructor takes a function that performs an asynchronous operation and returns a result of 42. If the operation completes successfully, the resolve function is called with the resulting value of 42. If the operation fails, the reject function is called with the reason "Error".
+
+After constructing the promise, you can use the then and catch methods to handle the fulfillment or rejection of the promise:
+
+javascript
+```
+promise.then((value) => {
+  console.log(value); // Output: 42
+}).catch((reason) => {
+  console.error(reason); // Output: Error
+});
+```
+In this example, the then method is used to handle the fulfillment of the promise and the catch method is used to handle the rejection of the promise. If the promise is fulfilled, the then method is called with the resulting value of 42, which is logged to the console. If the promise is rejected, the catch method is called with the reason "Error", which is logged to the console.
+
+In the example, the Promise constructor method takes a function parameter called the executor function which runs automatically when the constructor is called. The executor function generally starts an asynchronous operation and dictates how the promise should be settled.
+
+The executor function has two function parameters, usually referred to as the resolve() and reject() functions. The resolve() and reject() functions aren’t defined by the programmer. When the Promise constructor runs, JavaScript will pass its own resolve() and reject() functions into the executor function.
+
+resolve is a function with one argument. Under the hood, if invoked, resolve() will change the promise’s status from pending to fulfilled, and the promise’s resolved value will be set to the argument passed into resolve().
+reject is a function that takes a reason or error as an argument. Under the hood, if invoked, reject() will change the promise’s status from pending to rejected, and the promise’s rejection reason will be set to the argument passed into reject().
+Let’s look at another example executor function in a Promise constructor:
+
+```
+const executorFunction = (resolve, reject) => {
+  if (someCondition) {
+      resolve('I resolved!');
+  } else {
+      reject('I rejected!');
+  }
+}
+const myPromise = new Promise(executorFunction);
+
+```
+Let’s break down what’s happening above:
+
+We declare a variable ```myPromise```
+myFirstPromise is constructed using new Promise() which is the Promise constructor method.
+executorFunction() is passed to the constructor and has two functions as parameters: resolve and reject.
+If someCondition evaluates to true, we invoke resolve() with the string 'I resolved!'
+If not, we invoke reject() with the string 'I rejected!'
+In our example, myFirstPromise resolves or rejects based on a simple condition, but, in practice, promises settle based on the results of asynchronous operations. For example, a database request may fulfill with the data from a query or reject with an error thrown. In this exercise, we’ll construct promises which resolve synchronously to more easily understand how they work.
+
 ## Async
