@@ -33,6 +33,8 @@ I recommend reading the second-edition books in this order:
 * [Scope & Closures](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/scope-closures/README.md)
 * [Objects & Classes](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/objects-classes/README.md)
 * [Types & Grammar](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/types-grammar/README.md)
+
+* [Promises](https://github.com/dieulinh/You-Dont-Know-JS/blob/master/Promises.md)
 * [Sync & Async](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/sync-async/README.md)
 * [ES.Next & Beyond](https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/es-next-beyond/README.md)
 
@@ -40,10 +42,7 @@ I recommend reading the second-edition books in this order:
 
 As always, you'll be able to read these books online here entirely for free.
 
-This edition of the books is being self-published through [GetiPub](https://geti.pub) publishing. The published books will be made available for sale through normal book retail sources.
-
 If you'd like to contribute financially towards the effort (or any of my other OSS efforts) aside from purchasing the published books, please consider these options:
 
-* [Github Sponsorship](https://github.com/users/getify/sponsorship)
-* [Patreon](https://www.patreon.com/getify)
-* [Paypal](https://www.paypal.me/getify)
+* [Github Sponsorship](https://github.com/users/dieulinh/sponsorship)
+* [Paypal](https://www.paypal.me/linhvn09)
